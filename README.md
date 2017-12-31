@@ -10,7 +10,7 @@
 对于所有用户：
 * Android手机开启开发者选项
 * 用数据线连接Android手机和PC
-* 安装app-debug.apk 或者直接用Android Studio Build进手机
+* 安装app-release.apk 或者直接用Android Studio Build进手机
 * 执行adb shell命令 `adb shell`
 * 执行命令 `pm path com.liujian.wechatjumphelper`
 * 复制"package:" 之后的路径, 通常是一个 /data/app开头的一个apk路径

@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.liujian.wechatjumphelper.util.Constants;
 import com.liujian.wechatjumphelper.util.ImageAnalysisUtil;
@@ -24,6 +27,18 @@ public class MainActivity extends Activity {
     JumpThread mJumpThread;
 
     TextView mTvwStartJump;
+
+    Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 10086:
+                    Toast.makeText(MainActivity.this, "连接成功, 打开微信跳一跳\n开始游戏即可", Toast.LENGTH_SHORT).show();
+                    break;
+            }
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +93,7 @@ public class MainActivity extends Activity {
                 mBufferedOutputStream = new BufferedOutputStream(mSocket.getOutputStream());
                 mBufferedWriter = new BufferedWriter(new OutputStreamWriter(mBufferedOutputStream));
                 LogUtil.d("Connect 127.0.0.1:" + Constants.SOCKET_PORT + " Success!");
+                mHandler.sendEmptyMessage(10086);
             } catch (Exception e) {
                 LogUtil.d("Connect 127.0.0.1:" + Constants.SOCKET_PORT + " failed with excption: " + e.getMessage());
                 e.printStackTrace();
@@ -95,7 +111,7 @@ public class MainActivity extends Activity {
                     }
                     index++;
                     sendPress((long) pressTime);
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {

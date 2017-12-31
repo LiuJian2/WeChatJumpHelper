@@ -2,15 +2,13 @@ package com.liujian.wechatjumphelper.util;
 
 import android.util.Log;
 
-import com.liujian.wechatjumphelper.BuildConfig;
-
 /**
  * Created by liujian on 2017/12/31.
  */
 
 public class LogUtil {
 
-    private static final boolean DEBUG = BuildConfig.DEBUG;
+    private static final boolean DEBUG = true;
 
     public static final String TAG = "LJTAG";
 
