@@ -18,7 +18,7 @@ public class ImageAnalysisUtil {
      * 距离->时间转换参数
      * TODO 根据前两次跳跃调整距离时间参数
      */
-    public static double DISTANCE_TO_TIME = 1000 * 0.60 / 622.74;
+    public static double DISTANCE_TO_TIME = 1000 * 0.62 / 622.74;
 
     private static final float START_SCAN_RATIO = 0.33f; // 从屏幕的40%出开始向下扫描
 

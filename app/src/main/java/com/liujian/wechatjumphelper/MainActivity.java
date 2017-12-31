@@ -111,7 +111,7 @@ public class MainActivity extends Activity {
                     }
                     index++;
                     sendPress((long) pressTime);
-                    Thread.sleep(3000);
+                    Thread.sleep(1800);
                 } catch (IOException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {
