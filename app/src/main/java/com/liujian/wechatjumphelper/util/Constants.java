@@ -16,5 +16,5 @@ public class Constants {
 
     public static final String TAKE_PIC = "PIC";
 
-    public static final boolean SAVE_MARK_IMG = true;
+    public static final boolean SAVE_MARK_IMG = false;
 }
