@@ -34,6 +34,7 @@ Start JumpLocalService success, waiting client...
 
 先看个效果图, 原理下次再写..
 
-
-![Sample](https://github.com/LiuJian2/WeChatJumpHelper/blob/master/img/sample2.png)
+<img src="https://github.com/LiuJian2/WeChatJumpHelper/blob/master/img/mark1.png" width="400px">
+<img src="https://github.com/LiuJian2/WeChatJumpHelper/blob/master/img/mark2.png" width="400px">
+<img src="https://github.com/LiuJian2/WeChatJumpHelper/blob/master/img/sample2.png" width="400px">
 
