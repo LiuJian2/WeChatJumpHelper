@@ -35,6 +35,10 @@ public class MainActivity extends Activity {
                 case 10086:
                     Toast.makeText(MainActivity.this, "连接成功, 打开微信跳一跳\n开始游戏即可", Toast.LENGTH_SHORT).show();
                     break;
+                case 10088:
+                    if (msg.arg1 < 1) return;
+                    Toast.makeText(MainActivity.this, "Press " + msg.arg1 + " 毫秒", Toast.LENGTH_SHORT).show();
+                    break;
             }
 
         }
@@ -110,6 +114,10 @@ public class MainActivity extends Activity {
                         continue;
                     }
                     index++;
+                    Message message = Message.obtain();
+                    message.what = 10088;
+                    message.arg1 = (int) pressTime;
+                    mHandler.sendMessage(message);
                     sendPress((long) pressTime);
                     Thread.sleep(1800);
                 } catch (IOException e) {

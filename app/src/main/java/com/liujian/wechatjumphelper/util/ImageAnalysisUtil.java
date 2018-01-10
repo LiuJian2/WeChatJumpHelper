@@ -1,4 +1,4 @@
-﻿package com.liujian.wechatjumphelper.util;
+package com.liujian.wechatjumphelper.util;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
